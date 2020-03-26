@@ -8,12 +8,12 @@
 
 <title data-react-helmet="true">fork</title>
 
-<meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"><meta data-react-helmet="true" property="og:title" content="AccuInsight+ Documentation · 사용자 매뉴얼입니다."><meta data-react-helmet="true" name="twitter:card" content="summary"><meta data-react-helmet="true" name="description" content="## fork"><meta data-react-helmet="true" property="og:description" content="## fork"><meta data-react-helmet="true" property="og:url" content="https://accuinsight.github.io//docs/batchpipeline/workflow/workspace/job-processing/fork">
+<meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"><meta data-react-helmet="true" property="og:title" content="AccuInsight+ Documentation · 사용자 매뉴얼입니다."><meta data-react-helmet="true" name="twitter:card" content="summary"><meta data-react-helmet="true" name="description" content="## fork"><meta data-react-helmet="true" property="og:description" content="## fork"><meta data-react-helmet="true" property="og:url" content="https://accuinsight.github.io//docs/batchpipeline/workflow/workspace/job-processing/fork">
 
 <link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico">
 
 
-<link rel="stylesheet" href="/styles.ade3c0e9.css">
+<link rel="stylesheet" href="/styles.6678789e.css">
 
 </head>
 <body>
@@ -24,21 +24,21 @@
 서울특별시 보건환경연구원 대기오염측정망시스템에서 제공하는 대기오염 측정정보  </p></blockquote><ol><li><p>HDFS/Hive 브라우저를 통해 원시데이터 적재 및 테이블 생성</p><p><img src="/img/batchpipeline/workflow/workspace/job-processing/flow038_fork-join_%EC%9B%90%EC%8B%9C%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%A0%81%EC%9E%AC.png" alt="flow038"></p></li></ol><pre class="mdxCodeBlock_iHAB"><div class="codeBlockWrapper_2QGZ"><pre class="prism-code language-undefined codeBlock_19pQ" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">CREATE EXTERNAL TABLE  default.air_pollution(</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">                               measurement_day STRING,   -- 측정일시 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">                               station_cd STRING,        -- 측정소 코드</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">                               metric_cd STRING,         -- 측정항목 코드</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">                               medium DOUBLE,            -- 평균값</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">                               status INT,               -- 측정기 상태</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">                               national INT,             -- 국가 기준초과 구분</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">                               local_gov INT             -- 지자체 기준초과 구분</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">                       ) COMMENT &#x27;서울특별시 대기오염 측정정보(출처 : 공공데이터 포털)&#x27;</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">                       ROW FORMAT DELIMITED </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">                       FIELDS TERMINATED BY &#x27;,&#x27; </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">                       LINES TERMINATED BY &#x27;\n&#x27; </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">                       STORED AS TEXTFILE </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">                       LOCATION &#x27;/tmp/ManSample&#x27;</span></div></pre><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button></div></pre><ol start="2"><li><p>[executeHive]노드(노드명 : executeHive_sum)로 통계성 테이블 생성(전체 데이터량을 측정소별로 분리)</p><p><img src="/img/batchpipeline/workflow/workspace/job-processing/flow039_fork-join_%EA%B4%80%EC%B8%A1%EC%86%8C%EB%B3%84%EC%9A%94%EC%95%BD%ED%85%8C%EC%9D%B4%EB%B8%94%EC%83%9D%EC%84%B1.png" alt="flow039"></p></li><li><p>fork 노드 연결 및 [executeHive] 노드를 병렬로 연결하여 미세먼지(PM10), 초미세먼지(PM25) 데이터만 추출한 별도 테이블 생성</p></li></ol><ul><li><strong>[executeHive_pm10]</strong> create table air_pollution_pm10 as select * from air_pollution where air_pollution.metric_cd = &#x27;8&#x27; </li><li><strong>[executeHive_pm25]</strong> create table air_pollution_pm25 as select * from air_pollution where air_pollution.metric_cd = &#x27;9&#x27;</li></ul><blockquote><p>[Note] air_pollution 테이블의 측정항목 코드(metric_cd)는 아래와 같음  </p><table><thead><tr><th>코드</th><th>설명</th></tr></thead><tbody><tr><td>1</td><td>SO2   (아황산가스)</td></tr><tr><td>3</td><td>NO2   (이산화질소)</td></tr><tr><td>5</td><td>CO    (일산화탄소)</td></tr><tr><td>6</td><td>O3    (오존)</td></tr><tr><td>8</td><td>PM10  (미세먼지:Particulate Matter)</td></tr><tr><td>9</td><td>PM2.5 (초미세먼지)</td></tr></tbody></table></blockquote><ol start="4"><li>[fork]노드 사용할 경우 [join]노드를 사용해서 종료한다.  </li></ol><p>워크플로우 실행 후 새로운 테이블이 생성됐다. </p><p> <img src="/img/batchpipeline/workflow/workspace/job-processing/flow040_fork-join_%EC%8B%A4%ED%96%89%EA%B2%B0%EA%B3%BC.png" alt="flow040"></p></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/batchpipeline/workflow/workspace/job-processing/execute-hive"><h5 class="pagination-nav__link--sublabel">Previous</h5><h4 class="pagination-nav__link--label">« executeHive</h4></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/batchpipeline/workflow/workspace/job-processing/fs"><h5 class="pagination-nav__link--sublabel">Next</h5><h4 class="pagination-nav__link--label">fs »</h4></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#fork" class="contents__link">fork</a><ul><li><a href="#control-node" class="contents__link">Control Node</a></li><li><a href="#fork-1" class="contents__link">fork</a></li><li><a href="#example" class="contents__link">Example</a></li></ul></li></ul></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center">Copyright © 2020 BY SK HOLDINGS CO. LTD. ALL RIGHTS RESERVED</div></div></footer>
 </div>
 
-<script src="/styles.31cceb83.js"></script>
+<script src="/styles.bb8ba907.js"></script>
 
-<script src="/runtime~main.9eb9ac31.js"></script>
+<script src="/runtime~main.a8c8fd5f.js"></script>
 
-<script src="/main.535fbc4e.js"></script>
+<script src="/main.3ab4eb66.js"></script>
 
-<script src="/1.1ccce94b.js"></script>
+<script src="/1.6bfb026c.js"></script>
 
-<script src="/125.6f90d22d.js"></script>
+<script src="/125.ea67b1e3.js"></script>
 
-<script src="/20ac7829.8ca80f6e.js"></script>
+<script src="/20ac7829.08612246.js"></script>
 
-<script src="/17896441.5ca25548.js"></script>
+<script src="/17896441.e295abca.js"></script>
 
-<script src="/1186ed46.04173d59.js"></script>
+<script src="/1eb5a28c.f2ffd92d.js"></script>
 
 
 </body>
