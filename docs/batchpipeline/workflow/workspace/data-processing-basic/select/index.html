@@ -24,21 +24,21 @@
 <img src="/img/batchpipeline/workflow/workspace/data-processing-basic/prebasic058_select_%EB%85%B8%EB%93%9C%EC%8A%A4%ED%82%A4%EB%A7%88%EC%A0%95%EB%B3%B4.png" alt="prebasic058"> </p></li></ul></li></ol><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="troubleshooting"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#troubleshooting" title="Direct link to heading">#</a>Troubleshooting</h3><ol><li>클러스터 [OOO]의 세션상태를 확인할 수 없습니다.(설정 &gt; 세션관리)</li></ol><p><img src="/img/batchpipeline/workflow/workspace/data-processing-basic/prebasic059_select_%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EC%84%B8%EC%85%98%EC%83%81%ED%83%9C%ED%99%95%EC%9D%B8%EB%B6%88%EA%B0%80.png" alt="prebasic059"></p><p>Apache Livy 세션이 종료됐거나, 클러스터 내 가용 Memory를 다수 점유하고 있어 워크플로우 실행이 어려울 경우 위와 같은 메시지가 나타날 수 있다. 아래와 같이 조치한다.  </p><p>1&gt; [설정] &gt; [세션관리]에서 세션 상태정보를 확인한다. [NONE], [DEAD] 상태일 경우 기능 필드에서 [세션생성] 버튼을 눌러 Livy Seseeion을 생성한다.   </p><p>2&gt; 상태정보가 [IDLE]일 경우 Livy Session은 떠 있으나, 현재 작업중 또는 작업완료 후 메모리를 반환하지 않은 상태이다. 아래와 같이 작업상태를 먼저 확인한다.   </p><ul><li>[DHP] &gt; [CLUSTER] &gt; 작업 클러스터명 &gt; [APPL HISTORY] 으로 이동 후 ID별 작업상태(State, Final State)정보를 확인한다.   </li><li>&quot;bpSession&quot;을 제외한 다른 작업들이 종료상태라면 [세션관리]에서 [세션삭제] 후 [세션생성] 작업을 수행한다.  </li></ul></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/batchpipeline/workflow/workspace/data-processing-basic/sample"><h5 class="pagination-nav__link--sublabel">Previous</h5><h4 class="pagination-nav__link--label">« sample</h4></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/batchpipeline/workflow/workspace/data-processing-basic/sort"><h5 class="pagination-nav__link--sublabel">Next</h5><h4 class="pagination-nav__link--label">sort »</h4></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#definition" class="contents__link">Definition</a></li><li><a href="#set" class="contents__link">Set</a></li><li><a href="#example" class="contents__link">Example</a></li><li><a href="#troubleshooting" class="contents__link">Troubleshooting</a></li></ul></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center">Copyright © 2020 BY SK HOLDINGS CO. LTD. ALL RIGHTS RESERVED</div></div></footer>
 </div>
 
-<script src="/styles.9b27d229.js"></script>
+<script src="/styles.710ff8de.js"></script>
 
-<script src="/runtime~main.a61c7a55.js"></script>
+<script src="/runtime~main.c2e25df9.js"></script>
 
-<script src="/main.0c9e6d15.js"></script>
+<script src="/main.e27d6d15.js"></script>
 
-<script src="/1.1f2d6f75.js"></script>
+<script src="/1.9ad9a92f.js"></script>
 
-<script src="/246.e6e630ec.js"></script>
+<script src="/250.6cecbeef.js"></script>
 
-<script src="/20ac7829.b52e35e5.js"></script>
+<script src="/20ac7829.724e1435.js"></script>
 
-<script src="/17896441.46ab0f7c.js"></script>
+<script src="/17896441.83828cb3.js"></script>
 
-<script src="/1778afd6.1e381e8b.js"></script>
+<script src="/1778afd6.d0104204.js"></script>
 
 
 </body>
