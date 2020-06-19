@@ -24,21 +24,21 @@
 Property 패널의 [더보기+] 버튼을 누르면 입력가능한 전체  Property 항목을 볼 수 있습니다.</p><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="set"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#set" title="Direct link to heading">#</a>Set</h3><p>[setting], [scheduler], [parameter] 설정은 [워크플로우] &gt; [생성] &gt; [기본구성]을 참고합니다.</p><h4><a aria-hidden="true" tabindex="-1" class="anchor" id="property"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#property" title="Direct link to heading">#</a>property</h4><p>[Node Description] 작성 중인 노드명 입력</p><p><img src="/img/pipeline/workflow/workspace/job-processing/java01_property.png" alt="flow060"></p><ol><li>prepare : 노드 실행 결과를 HDFS에 저장하기 위해 파일삭제/폴더생성 작업 선 수행(워크플로우 반복실행 시 활용가능)<ul><li>delete : 노드 실행 전 삭제할 폴더/파일 경로</li><li>mkdir	: 노드 실행 전 생성할 폴더 경로		</li></ul></li><li>file : 노드에서 사용할 라이브러리 경로를 설정</li><li>archive : archive 경로를 설정</li><li>retry <ul><li>max : 실행 실패 시 재시도 횟수</li><li>period : 재시도 주기(분 단위)</li></ul></li><li>property : 실행에 사용할 property (key, value) 입력</li><li>javaOpts : Java 실행시 적용할 옵션 ex) -Xms256m</li><li>captureOutput : Java 실행결과를 다음 노드로 전달 여부</li><li>mainClass : 실행할 Java 클래스 입력</li><li>params : main 함수에 전달할 parameter 입력</li><li>jobXml : jobXml 경로 입력(잡에 전달할 프로퍼티를 별도 xml로 작성하여 전달가능)</li><li>forceOK : 데이터 처리가 실패해도 정상으로 표시하고 종료</li></ol><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="example"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#example" title="Direct link to heading">#</a>Example</h3><p>AddTwoNumbers.class 파일을 java 노드에서 실행하는 예제입니다.</p><ol><li>[브라우저] &gt; [HDFS] 브라우저에서 AddTwoNumbers.class 파일 등록</li><li>[Flow구성] &gt; [java] 노드를 drag &amp; drop 한 후 setting 패널에서 실행클러스터를 선택 </li><li>property 패널에서 아래와 같이 입력<ul><li>2.file : AddTwoNumbers.class 파일 저장경로 지정</li><li>8.mainClass : mainClass명 입력 &quot;AddTwoNumbers&quot;</li></ul></li></ol></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/pipeline/workflow/workspace/job-processing/hive-to-hdfs"><h5 class="pagination-nav__link--sublabel">Previous</h5><h4 class="pagination-nav__link--label">« hiveToHdfs</h4></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/pipeline/workflow/workspace/job-processing/join"><h5 class="pagination-nav__link--sublabel">Next</h5><h4 class="pagination-nav__link--label">join »</h4></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#definition" class="contents__link">Definition</a></li><li><a href="#set" class="contents__link">Set</a></li><li><a href="#example" class="contents__link">Example</a></li></ul></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center">Copyright © 2020 BY SK HOLDINGS CO. LTD. ALL RIGHTS RESERVED</div></div></footer>
 </div>
 
-<script src="/styles.2140f325.js"></script>
+<script src="/styles.5ce17067.js"></script>
 
-<script src="/runtime~main.ad7178e9.js"></script>
+<script src="/runtime~main.901c379e.js"></script>
 
-<script src="/main.0ec4c08e.js"></script>
+<script src="/main.f0e0e1c3.js"></script>
 
-<script src="/1.9e0e178b.js"></script>
+<script src="/1.16a66b10.js"></script>
 
-<script src="/272.8026393f.js"></script>
+<script src="/272.c0c4c2b7.js"></script>
 
-<script src="/20ac7829.229b28af.js"></script>
+<script src="/20ac7829.db76db9d.js"></script>
 
-<script src="/17896441.6678a2c1.js"></script>
+<script src="/17896441.009dc42a.js"></script>
 
-<script src="/410f221b.206b6bae.js"></script>
+<script src="/410f221b.ec8ea998.js"></script>
 
 
 </body>
