@@ -23,21 +23,21 @@
 좌측 [Flow구성]노드 중 [python]노드를 drag &amp; drop 한다. </p><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="set"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#set" title="Direct link to heading">#</a>Set</h3><p>[setting], [scheduler], [parameter] 설정은 [워크플로우 생성] &gt; [설정]을 참고한다.</p><h4><a aria-hidden="true" tabindex="-1" class="anchor" id="property"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#property" title="Direct link to heading">#</a>property</h4><p>[Node Description] 작성 중인 노드명 입력</p><p>property 중 2~4 항목은 [연결관리]에 등록된 원격서버 정보 선택시 자동으로 입력되며, 원하는 서버목록이 없을 경우 [설정] &gt; [원격서버관리]에서 필요서버를 먼저 등록한다. </p><ol><li>appName : appName 입력</li><li>python 실행 IP : IP주소 및 PORT   <ul><li>IP주소 : 원격서버 접속 IP  </li><li>PORT : 원격서버 접속 PORT</li></ul></li><li>user : 원격 서버 사용자 아이디</li><li>password : 원격 서버 사용자 패스워드</li><li>원격서버 ID : [설정] &gt; [원격서버관리]에 저장된 서버 ID</li><li>원격서버명 : [설정] &gt; [원격서버관리]에 저장된 서버명</li><li>sourcepath : 브라우저를 통해 원격서버에 저장된 소스선택 후 불러오기 기능</li><li>source : 실행할 python 코드 입력</li><li>argument : 인수 설정</li><li>forceOK : 실패 시 강제 OK 처리 여부</li></ol><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="example"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#example" title="Direct link to heading">#</a>Example</h3><p>원격서버에 저장된 csv 파일을 읽어 txt 파일로 생성하는 파이선 코드 예제이다. 수집서버로 전달되는 원천데이터를 python으로 전처리하는 업무가 있을 경우 적용 가능하다. </p><ol><li>hdfsToServer 노드를 사용해서 원격지 서버로 csv파일을 옮긴다. </li></ol><ul><li>/home/dpcore/AIR_HOUR_2019_3.csv</li></ul><ol start="2"><li><p>연결관리에서 원격서버를 선택한다. </p></li><li><p>8.source 옵션에 아래와 같이 입력한다. </p></li></ol><pre class="mdxCodeBlock_iHAB"><div class="codeBlockWrapper_2QGZ"><pre class="prism-code language-undefined codeBlock_19pQ" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">import csv, sys</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">sys.stdout = open(&#x27;output_air_hour2019.txt&#x27;,&#x27;w&#x27;) </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">with open(&#x27;/home/dpcore/AIR_HOUR_2019_3.csv&#x27;,&#x27;r&#x27;) as file:</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    reader  = csv.reader(file)</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    for record in reader:</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">        print(record)</span></div></pre><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button></div></pre><p> <img src="/img/batchpipeline/workflow/workspace/job-processing/flow073_python_property%EC%84%A4%EC%A0%95.png" alt="flow073"></p><ol start="4"><li><p>저장 및 실행 후 원격서버에 output_air_hour2019.txt 파일이 생성되었다. </p><p><img src="/img/batchpipeline/workflow/workspace/job-processing/flow074_python_%EC%8B%A4%ED%96%89%EA%B2%B0%EA%B3%BC.png" alt="flow074"></p></li></ol></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/batchpipeline/workflow/workspace/job-processing/pyspark"><h5 class="pagination-nav__link--sublabel">Previous</h5><h4 class="pagination-nav__link--label">« pyspark</h4></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/batchpipeline/workflow/workspace/job-processing/query"><h5 class="pagination-nav__link--sublabel">Next</h5><h4 class="pagination-nav__link--label">query »</h4></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#definition" class="contents__link">Definition</a></li><li><a href="#set" class="contents__link">Set</a></li><li><a href="#example" class="contents__link">Example</a></li></ul></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center">Copyright © 2020 BY SK HOLDINGS CO. LTD. ALL RIGHTS RESERVED</div></div></footer>
 </div>
 
-<script src="/styles.5ce17067.js"></script>
+<script src="/styles.2140f325.js"></script>
 
-<script src="/runtime~main.a509ac4b.js"></script>
+<script src="/runtime~main.f055b777.js"></script>
 
-<script src="/main.57e78e1b.js"></script>
+<script src="/main.83c42157.js"></script>
 
-<script src="/1.3aa1aa2f.js"></script>
+<script src="/1.999c023f.js"></script>
 
-<script src="/273.109413d8.js"></script>
+<script src="/273.c7e00eec.js"></script>
 
-<script src="/20ac7829.25eb70e2.js"></script>
+<script src="/20ac7829.dbdc1ce3.js"></script>
 
-<script src="/17896441.6925646b.js"></script>
+<script src="/17896441.819d5482.js"></script>
 
-<script src="/8f12c429.bd2b86fa.js"></script>
+<script src="/8f12c429.7834a325.js"></script>
 
 
 </body>
