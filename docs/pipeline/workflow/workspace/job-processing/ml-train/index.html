@@ -8,12 +8,12 @@
 
 <title data-react-helmet="true">mlTrain</title>
 
-<meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"><meta data-react-helmet="true" property="og:title" content="AccuInsight+ Documentation · 사용자 매뉴얼입니다."><meta data-react-helmet="true" name="twitter:card" content="summary"><meta data-react-helmet="true" name="description" content="### Definition"><meta data-react-helmet="true" property="og:description" content="### Definition"><meta data-react-helmet="true" property="og:url" content="https://accuinsight.github.io//docs/pipeline/workflow/workspace/job-processing/ml-train">
+<meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"><meta data-react-helmet="true" property="og:title" content="AccuInsight+ Documentation · 사용자 매뉴얼입니다."><meta data-react-helmet="true" name="twitter:card" content="summary"><meta data-react-helmet="true" name="description" content="### Definition"><meta data-react-helmet="true" property="og:description" content="### Definition"><meta data-react-helmet="true" property="og:url" content="https://accuinsight.github.io//docs/pipeline/workflow/workspace/job-processing/ml-train">
 
 <link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico">
 
 
-<link rel="stylesheet" href="/styles.ade3c0e9.css">
+<link rel="stylesheet" href="/styles.6678789e.css">
 
 </head>
 <body>
@@ -24,21 +24,21 @@
 Property 패널의 [더보기+] 버튼을 누르면 입력가능한 전체  Property 항목을 볼 수 있습니다.</p><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="set"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#set" title="Direct link to heading">#</a>Set</h3><p>[setting], [scheduler], [parameter] 설정은 [워크플로우] &gt; [생성] &gt; [기본구성]을 참고합니다.</p><h4><a aria-hidden="true" tabindex="-1" class="anchor" id="property"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#property" title="Direct link to heading">#</a>property</h4><p>[Node Description] 작성 중인 노드명 입력</p><p><img src="/img/pipeline/workflow/workspace/job-processing/mltrain01_property.png" alt="flow060"></p><ol><li>modelName : 모델명 입력 </li><li>modelDesc : 모델 설명 입력 </li><li>pipelineId : 기존의 파이프라인 목록 중 사용할 파이프라인을 선택하거나 신규 파이프라인을 등록하여 사용</li><li>datasetPath : ml train을 수행할 데이터셋 경로 (HDFS, S3 File browser을 제공-팝업에서 해당 경로를 선택)</li><li>format : 데이터셋 포맷 선택 (parquet, csv, orc 중 선택)</li><li>datasetPathcredential : datasetPath가 s3인 경우 credential 정보 (datasetPath 설정 시 자동셋팅됨)</li><li>modelPath : 학습 성공 시 모델 저장 경로 (HDFS, S3 File browser을 제공-팝업에서 해당 경로를 선택)</li><li>modelPathcredential : modelPath가 s3인 경우 credential 정보 (modelPath 설정 시 자동셋팅됨)</li><li>modelCluster : 학습시 사용할 클러스터명 (setting의 cluster 선택 시 자동셋팅됨)</li><li>spartOpts : spark 옵션 리스트 입력 (key : --executor-memory , value : 20G)</li></ol><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="example"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#example" title="Direct link to heading">#</a>Example</h3><h4><a aria-hidden="true" tabindex="-1" class="anchor" id="property-1"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#property-1" title="Direct link to heading">#</a>Property</h4><p>Dataset과 모델 저장 위치를 HDFS 브라우저로 사용하는 예시입니다.</p><p><img src="/img/pipeline/workflow/workspace/job-processing/mltrain02_example.png" alt="flow014"></p><h4><a aria-hidden="true" tabindex="-1" class="anchor" id="실행-결과"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#실행-결과" title="Direct link to heading">#</a>실행 결과</h4><p>[브라우저] &gt; [HDFS] 브라우저에서 mlTrain 실행 결과로 저장된 모델을 확인 할 수 있습니다.</p><p><img src="/img/pipeline/workflow/workspace/job-processing/mltrain03_result.png" alt="flow014"></p></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/pipeline/workflow/workspace/job-processing/ml-recommend"><h5 class="pagination-nav__link--sublabel">Previous</h5><h4 class="pagination-nav__link--label">« mlRecommend</h4></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/pipeline/workflow/workspace/job-processing/pyspark"><h5 class="pagination-nav__link--sublabel">Next</h5><h4 class="pagination-nav__link--label">pyspark »</h4></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#definition" class="contents__link">Definition</a></li><li><a href="#set" class="contents__link">Set</a></li><li><a href="#example" class="contents__link">Example</a></li></ul></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center">Copyright © 2020 BY SK HOLDINGS CO. LTD. ALL RIGHTS RESERVED</div></div></footer>
 </div>
 
-<script src="/styles.3c7f481a.js"></script>
+<script src="/styles.5ce17067.js"></script>
 
-<script src="/runtime~main.f7b638b2.js"></script>
+<script src="/runtime~main.a509ac4b.js"></script>
 
-<script src="/main.48231742.js"></script>
+<script src="/main.57e78e1b.js"></script>
 
-<script src="/1.33389831.js"></script>
+<script src="/1.3aa1aa2f.js"></script>
 
-<script src="/273.9e184b81.js"></script>
+<script src="/273.109413d8.js"></script>
 
-<script src="/20ac7829.a1426478.js"></script>
+<script src="/20ac7829.25eb70e2.js"></script>
 
-<script src="/17896441.1c3b603f.js"></script>
+<script src="/17896441.6925646b.js"></script>
 
-<script src="/aca1814f.328367fe.js"></script>
+<script src="/6be180e3.10b7b522.js"></script>
 
 
 </body>
