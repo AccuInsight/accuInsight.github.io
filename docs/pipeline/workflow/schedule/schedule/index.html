@@ -8,12 +8,12 @@
 
 <title data-react-helmet="true">Schedule</title>
 
-<meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"><meta data-react-helmet="true" property="og:title" content="AccuInsight+ Documentation · 사용자 매뉴얼입니다."><meta data-react-helmet="true" name="twitter:card" content="summary"><meta data-react-helmet="true" name="description" content="## 스케줄"><meta data-react-helmet="true" property="og:description" content="## 스케줄"><meta data-react-helmet="true" property="og:url" content="https://accuinsight.github.io//docs/pipeline/workflow/schedule/schedule">
+<meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"><meta data-react-helmet="true" property="og:title" content="AccuInsight+ Documentation · 사용자 매뉴얼입니다."><meta data-react-helmet="true" name="twitter:card" content="summary"><meta data-react-helmet="true" name="description" content="## 스케줄"><meta data-react-helmet="true" property="og:description" content="## 스케줄"><meta data-react-helmet="true" property="og:url" content="https://accuinsight.github.io//docs/pipeline/workflow/schedule/schedule">
 
 <link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico">
 
 
-<link rel="stylesheet" href="/styles.ade3c0e9.css">
+<link rel="stylesheet" href="/styles.6678789e.css">
 
 </head>
 <body>
@@ -24,21 +24,21 @@
 <img src="/img/pipeline/workflow/schedule/schedule002_%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0%EB%AA%A9%EB%A1%9D_%EC%8A%A4%EC%BC%80%EC%A4%84%EC%A0%81%EC%9A%A9.png" alt="schedule002">  </p><ol start="5"><li>enable : enable 항목 체크시 scheduler 탭에서 설정한 사항에 맞게 워크플로우 job 실행</li><li>timezone : timezone 설정(기본값 : kst)</li><li>start : 시작 일시 설정(현재 시간보다 이후로 지정)</li><li>end : 종료 일시 설정</li><li>frequency : Time Interval 기반으로 워크플로우 job 실행. Basic, Cron 등 두 가지 InputType 제공</li></ol><ul><li>Basic : frequencyNumber에 실행주기(숫자값), frequencyUnit에 minutes, hours, days, months 중 선택 하여 주기 설정 가능. frequencyUnit을 minutes로 frequencyNumber를 5로 입력한 경우 5분 주기로 워크플로우 job을 실행하겠다는 의미. 워크플로우 실행 최소주기는 5분으로 그 이하로 설정할 수 없음  </li><li>Cron : Unix Crontab 스타일로 스케줄 설정. 평일 10분 마다 워크플로우 실행시 [0/10 <em> ? </em> 1-5 *]과 같이 입력</li></ul><ol start="11"><li>controls : timeout, concurrency, throttle, execution 설정 </li></ol><ul><li><p>timeout : 타임아웃 시간을 설정(기본값 : -1)</p><table><thead><tr><th>timeout</th><th>설명</th></tr></thead><tbody><tr><td>-1</td><td>timeout 미설정. 즉 워크플로우 작업이 가능할 때까지 무한정 대기</td></tr><tr><td>0</td><td>workflow가 정상적이지 않을 경우 즉시 종료</td></tr></tbody></table></li><li><p>concurrency : 동시에 실행(running)시키는 작업 수</p></li><li><p>throttle : 특정 시점에 실행 대기(waiting) 중인 작업 수</p></li><li><p>execution : 인스턴스들의 실행 규칙을 설정</p><table><thead><tr><th>execution</th><th>설명</th></tr></thead><tbody><tr><td>FIFO</td><td>순서대로 실행</td></tr><tr><td>LIFO</td><td>가장 나중에 들어온 것부터 실행</td></tr><tr><td>ONLYLAST</td><td>마지막 작업만 실행하고 나머지 작업은 실행하지 않음</td></tr></tbody></table></li></ul><ol start="11"><li><p>datasets : 미리 작성해둔 dataset을 불러와서 파일이 존재하거나 디렉토리 네이밍 규칙 등으로 조건에 따른 스케줄 설정</p><p>• inputEvents</p><ul><li>name: input-dataset 이름</li><li>uriTemplate: dataset이 위치한 HDFS 경로</li><li>frequency: 수행 주기 (minutes, hours, days, months 중 택1)</li><li>initialInstance: 첫번째 인스턴스 시점 (해당 시점 이전에 생성된 인스턴스는 무시)</li><li>timezone: timezone 정보</li><li>doneFlag: 필드를 통해서 코디네이터가 해당 데이터셋이 처리할 준비가 되었는지를 알려줌(_SUCCESS, DIRECTORY 중 택1)</li></ul><p>• outputEvents</p><ul><li>name: output-dataset 이름</li><li>uriTemplate: dataset이 위치한 HDFS 경로</li><li>frequency: 수행 주기 (minutes, hours, days, months 중 택1)</li><li>initialInstance: 첫번째 인스턴스 시점 (해당 시점 이전에 생성된 인스턴스는 무시)</li><li>timezone: timezone 정보</li><li>doneFlag: 필드를 통해서 코디네이터가 해당 데이터셋이 처리할 준비가 되었는지를 알려줌(_SUCCESS, DIRECTORY 중 택1)</li></ul></li></ol><h4><a aria-hidden="true" tabindex="-1" class="anchor" id="검토사항"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#검토사항" title="Direct link to heading">#</a>검토사항</h4><ul class="contains-task-list"><li class="task-list-item"><input type="checkbox" disabled=""> 스케줄링tab 비활성화되어 있음. 활성화방법 확인필요</li></ul></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/pipeline/workflow/management/management"><h5 class="pagination-nav__link--sublabel">Previous</h5><h4 class="pagination-nav__link--label">« management</h4></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/pipeline/workflow/dashboard/dashboard"><h5 class="pagination-nav__link--sublabel">Next</h5><h4 class="pagination-nav__link--label">dashboard »</h4></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#스케줄" class="contents__link">스케줄</a><ul><li><a href="#스케줄-관리" class="contents__link">스케줄 관리</a></li><li><a href="#스케줄-등록" class="contents__link">스케줄 등록</a></li></ul></li></ul></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center">Copyright © 2020 BY SK HOLDINGS CO. LTD. ALL RIGHTS RESERVED</div></div></footer>
 </div>
 
-<script src="/styles.3c7f481a.js"></script>
+<script src="/styles.2140f325.js"></script>
 
-<script src="/runtime~main.a82cd5fc.js"></script>
+<script src="/runtime~main.2204b422.js"></script>
 
-<script src="/main.48231742.js"></script>
+<script src="/main.83c42157.js"></script>
 
-<script src="/1.33389831.js"></script>
+<script src="/1.999c023f.js"></script>
 
-<script src="/273.9e184b81.js"></script>
+<script src="/273.c7e00eec.js"></script>
 
-<script src="/20ac7829.8c47026e.js"></script>
+<script src="/20ac7829.a9836956.js"></script>
 
-<script src="/17896441.1c3b603f.js"></script>
+<script src="/17896441.819d5482.js"></script>
 
-<script src="/8009dc3b.3757b7f9.js"></script>
+<script src="/bad3288e.49d240ea.js"></script>
 
 
 </body>
