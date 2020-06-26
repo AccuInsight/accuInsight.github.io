@@ -13,7 +13,7 @@
 <link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico">
 
 
-<link rel="stylesheet" href="/styles.6678789e.css">
+<link rel="stylesheet" href="/styles.3f12000f.css">
 
 </head>
 <body>
@@ -39,21 +39,21 @@
 (<em>method</em>)  <strong>load_data</strong>( <em>model_version</em> = &#x27;<em>modelVersion</em>&#x27; ) </p><pre class="mdxCodeBlock_iHAB"><div class="codeBlockWrapper_2QGZ"><pre class="prism-code language-python codeBlock_19pQ" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token keyword" style="font-style:italic">from</span><span class="token plain"> Accuinsight</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token plain">Lifecycle</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token plain">utils </span><span class="token keyword" style="font-style:italic">import</span><span class="token plain"> load_data</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">load_data</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token string" style="color:rgb(195, 232, 141)">&#x27;run_name&#x27;</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span></div></pre><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button></div></pre><ul><li><p>과거에 학습되어 Experiments에 기록된 모델을 재사용하고자 할 경우, 해당 모델의 &#x27;<em>Run Name</em>&#x27;을 통해 모델을 불러올 수 있습니다.</p></li><li><p>Workspace 목록에서 특정 workspace명 옆의 [v]를 클릭하면, Experiments 요약정보를 다음과 같이 확인하실 수 있습니다.  </p><p>[그림추가]  </p></li><li><p>&#x27;<em>Run Name</em>&#x27; 칼럼의 값을 복사하여 원하는 모델을 불러오는데 사용하시면 됩니다.  </p></li></ul></li></ol><ul><li><strong><em>Arguments</em></strong><br><em>run_name</em>: 불러오고자 하는 모델의 Experiment Run Name을 복사하여 입력합니다.</li></ul><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="워크스페이스--소스-저장소-저장"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#워크스페이스--소스-저장소-저장" title="Direct link to heading">#</a>워크스페이스 &gt; 소스 저장소 저장</h3><p>워크스페이스 작업폴더의 소스를 소스 저장소로 저장할 수 있습니다.</p><p><img src="/img/modeler/management/workspace_srcreposave.png" alt="workspace"></p><ol><li>소스 저장소로 저장<ul><li>소스저장소는 분석 작업중인 소스코드 형상관리를 위한 저장소이며 워크스페이스 리소스가 삭제되더라도 소스저장소에 저장된 소스코드는 유지됨</li><li>소스크기에 따라 저장하는 과정에서 다소 시간이 소요될 수 있음</li></ul></li></ol><ol start="2"><li>신규소스 추가<ul><li>소스를 새로운 이름으로 소스 저장소에 저장</li></ul></li></ol><ol start="3"><li>저장된 소스 업데이트<ul><li>기존 저장된 소스에 새로운 버전을 발행하여 소스 저장소에 저장</li><li>버전은 시스템에서 자동으로 발행됨</li></ul></li></ol><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="워크스페이스--배포-저장소-저장"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#워크스페이스--배포-저장소-저장" title="Direct link to heading">#</a>워크스페이스 &gt; 배포 저장소 저장</h3><p> 워크스페이스 작업폴더의 모델을 배포 저장소로 저장할 수 있습니다.</p><p><img src="/img/modeler/management/workspace_modelreposave.png" alt="workspace"></p><ol><li>배포저장소로 저장<ul><li>‘신규모델 추가’ 또는 ‘저장된 모델 업데이트’를 선택하여 저장</li></ul></li></ol><ol start="2"><li>신규모델 추가<ul><li>모델을 새로운 이름으로 배포 저장소에 저장</li></ul></li></ol><ol start="3"><li>저장된 모델 업데이트<ul><li>기존에 저장된 모델에 새로운 버전을 발행하여 배포 저장소에 저장</li><li>배포 저장소로 저장시, 사용자는 모델에 명시적으로 버전을 지정해야 함</li></ul></li></ol><h4><a aria-hidden="true" tabindex="-1" class="anchor" id="note"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#note" title="Direct link to heading">#</a>Note</h4><blockquote><p>저장된 모델을 업데이트 시, 모델 버전은 이전보다 높은 버전이어야 함 (ex. 기존 버전: 1.0.1 인 경우 -&gt; 신규 버전: 1.0.0 (x), 1.0.1(x), 1.1(o), 1.0.2(o))</p></blockquote></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/modeler/management/project"><h5 class="pagination-nav__link--sublabel">Previous</h5><h4 class="pagination-nav__link--label">« 프로젝트 관리</h4></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/modeler/management/deploy"><h5 class="pagination-nav__link--sublabel">Next</h5><h4 class="pagination-nav__link--label">배포 »</h4></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#워크스페이스-관리" class="contents__link">워크스페이스 관리</a></li><li><a href="#워크스페이스-상세-정보-관리" class="contents__link">워크스페이스 상세 정보 관리</a></li><li><a href="#워크스페이스--experiment--accuinsight-sdk" class="contents__link">워크스페이스 > Experiment > AccuInsight SDK</a></li><li><a href="#워크스페이스--소스-저장소-저장" class="contents__link">워크스페이스 > 소스 저장소 저장</a></li><li><a href="#워크스페이스--배포-저장소-저장" class="contents__link">워크스페이스 > 배포 저장소 저장</a></li></ul></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center">Copyright © 2020 BY SK HOLDINGS CO. LTD. ALL RIGHTS RESERVED</div></div></footer>
 </div>
 
-<script src="/styles.2140f325.js"></script>
+<script src="/styles.5ce17067.js"></script>
 
-<script src="/runtime~main.93f2de3f.js"></script>
+<script src="/runtime~main.a317f3da.js"></script>
 
-<script src="/main.f5aedd35.js"></script>
+<script src="/main.71cac55c.js"></script>
 
-<script src="/1.999c023f.js"></script>
+<script src="/1.9af4e26f.js"></script>
 
-<script src="/273.c7e00eec.js"></script>
+<script src="/273.a2976c1d.js"></script>
 
-<script src="/20ac7829.dad5b274.js"></script>
+<script src="/20ac7829.c2ce40f0.js"></script>
 
-<script src="/17896441.819d5482.js"></script>
+<script src="/17896441.6925646b.js"></script>
 
-<script src="/076dee21.aef86828.js"></script>
+<script src="/076dee21.e0661782.js"></script>
 
 
 </body>

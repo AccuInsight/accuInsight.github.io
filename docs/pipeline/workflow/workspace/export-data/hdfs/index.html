@@ -13,7 +13,7 @@
 <link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico">
 
 
-<link rel="stylesheet" href="/styles.6678789e.css">
+<link rel="stylesheet" href="/styles.3f12000f.css">
 
 </head>
 <body>
@@ -25,21 +25,21 @@ Property 패널의 [더보기+] 버튼을 누르면 입력가능한 전체 Prope
 <img src="/img/pipeline/workflow/workspace/export-data/expdata003_hdfs_main.png" alt="expdata003"></p><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="set"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#set" title="Direct link to heading">#</a>Set</h3><p>[setting], [parameter] 설정은 [워크플로우] &gt; [생성] &gt; [기본구성]을 참고합니다.</p><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="property"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#property" title="Direct link to heading">#</a>Property</h3><p>[Node Description] 작성 중인 노드명 입력  </p><img src="/img/pipeline/workflow/workspace/export-data/expdata004_hdfs_property.png" width="500px" height="600px"><ol><li><p>path : 데이터 저장 경로 설정</p></li><li><p>folder : 데이터 저장 폴더명. 날짜 표현식 입력하여 해당 날짜로 치환 가능하며, 관련 Guide는 아래와 같음</p><ul><li><p>날짜 표현식 : #{now:날짜 포맷}</p></li><li><p>현재 날짜가 2019년 7월 3일 12시인 경우 아래와 같이 표현 가능</p></li><li><p>/test/#{now:yyyyMMdd} 로 지정시 /test/20190703 이란 디렉토리로 치환됨  </p><table><thead><tr><th>표현식</th><th>설명</th></tr></thead><tbody><tr><td>#{now:yyyyMMdd}</td><td>오늘 날짜 20190703 으로 치환</td></tr><tr><td>#{now-1d:yyyy-MM-dd}</td><td>어제 날짜 2019-07-02로 치환</td></tr><tr><td>#{now-1w:yyyyMMddHH}</td><td>1주일전 날짜 2019062612로 치환</td></tr></tbody></table></li></ul></li><li><p>filename : Hadoop 처리 결과파일(기본파일명 : part-*)을 지정된 이름으로 변경</p></li><li><p>format : 저장 포맷 설정(json, orc, parquet, csv, text 중 택1)</p></li><li><p>mode : 저장모드 설정</p><ul><li>error : 파일이 있으면 에러 처리</li><li>append : 다른 이름으로 파일 추가  </li><li>overwrite : 기존 파일을 삭제하고 추가</li><li>ignore : 파일이 있으면 저장하지 않고, 에러 처리도 하지 않음</li></ul></li><li><p>header : 헤더 여부(true, false 중 택1)</p></li><li><p>partitionBy : 특정 컬럼에 대해 Partitioning 하여 데이터 저장가능(컬럼 데이터별로 하위 폴더가 생성)</p></li><li><p>option : key, value 설정(null을 문자열로 인식하는 것을 방지 할 수 있음)</p></li><li><p>highAvailability : 네임노드의 HA구성 여부 결정</p></li><li><p>nameservices : nameNode 명 기재</p></li><li><p>namenode1 : 이중화 nameNode 의 첫번째IP</p></li><li><p>namenode2 : 이중화 nameNode 의 두번째IP</p></li><li><p>mlDataset</p><ul><li>ML Dataset 등록여부 : ML Dataset을 등록할 경우 체크</li><li>ML Dataset Name : ML Dataset 명 입력</li><li>Description : ML Dataset 상세설명 입력</li></ul></li><li><p>catalogDataset</p><ul><li>Catalog Dataset 등록여부 : Catalog Dataset을 등록할 경우 체크</li><li>targetBucket : Catalog Bucket 지정</li><li>Dataset Name : Catalog Dataset 명 입력</li><li>Catalog user id : Catalog user id 입력</li></ul></li></ol><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="example"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#example" title="Direct link to heading">#</a>Example</h3><p>Sandbox에 적재된 서울특별시 대기오염 측정정보(2019년기준, 출처 : 공공데이터포털, <a href="https://www.data.go.kr">https://www.data.go.kr</a>)를 sampling 하여 이를 다시 hdfs에 저장합니다. 저장폴더에는 날짜표현식을 적용합니다. </p><ol><li>[HDFS불러오기], [random], [HDFS내보내기] 노드를 Designer에 Drag &amp; Drop하여 워크플로우 생성<br><img src="/img/pipeline/workflow/workspace/export-data/expdata005_hdfs_exampleworkflow.png" alt="expdata005">  </li><li>[random]노드에서 비복원방식으로 10%만 추출(fraction 값을 0.1)하도록 설정<br><img src="/img/pipeline/workflow/workspace/export-data/expdata006_hdfs_exampleworkflow_random%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0.png" alt="expdata006">  </li><li>[HDFS내보내기]노드에 아래와 같이 입력 후 추출데이터 확인<img src="/img/pipeline/workflow/workspace/export-data/expdata007_hdfs_exampleworkflow_hdfs내보내기설정.png" width="500px" height="450px">     </li><li>[브라우저] 메뉴에서 추출된 데이터 확인가능<br><img src="/img/pipeline/workflow/workspace/export-data/expdata008_hdfs_exampleworkflow_%EC%8B%A4%ED%96%89%EA%B2%B0%EA%B3%BC.png" alt="expdata008">  </li></ol></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/pipeline/workflow/workspace/export-data/rdb"><h5 class="pagination-nav__link--sublabel">Previous</h5><h4 class="pagination-nav__link--label">« RDB 내보내기</h4></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/pipeline/workflow/workspace/export-data/hive"><h5 class="pagination-nav__link--sublabel">Next</h5><h4 class="pagination-nav__link--label">HIVE 내보내기 »</h4></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#definition" class="contents__link">Definition</a></li><li><a href="#set" class="contents__link">Set</a></li><li><a href="#property" class="contents__link">Property</a></li><li><a href="#example" class="contents__link">Example</a></li></ul></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center">Copyright © 2020 BY SK HOLDINGS CO. LTD. ALL RIGHTS RESERVED</div></div></footer>
 </div>
 
-<script src="/styles.2140f325.js"></script>
+<script src="/styles.5ce17067.js"></script>
 
-<script src="/runtime~main.93f2de3f.js"></script>
+<script src="/runtime~main.a317f3da.js"></script>
 
-<script src="/main.f5aedd35.js"></script>
+<script src="/main.71cac55c.js"></script>
 
-<script src="/1.999c023f.js"></script>
+<script src="/1.9af4e26f.js"></script>
 
-<script src="/273.c7e00eec.js"></script>
+<script src="/273.a2976c1d.js"></script>
 
-<script src="/20ac7829.dad5b274.js"></script>
+<script src="/20ac7829.c2ce40f0.js"></script>
 
-<script src="/17896441.819d5482.js"></script>
+<script src="/17896441.6925646b.js"></script>
 
-<script src="/2ca24d7d.428ea6ce.js"></script>
+<script src="/2ca24d7d.c099d7e6.js"></script>
 
 
 </body>
