@@ -13,7 +13,7 @@
 <link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico">
 
 
-<link rel="stylesheet" href="/styles.3f12000f.css">
+<link rel="stylesheet" href="/styles.6678789e.css">
 
 </head>
 <body>
@@ -24,21 +24,21 @@
 Property 패널의 [더보기+] 버튼을 누르면 입력가능한 전체  Property 항목을 볼 수 있습니다.</p><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="set"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#set" title="Direct link to heading">#</a>Set</h3><p>[setting], [scheduler], [parameter] 설정은 [워크플로우] &gt; [생성] &gt; [기본구성]을 참고합니다.</p><h4><a aria-hidden="true" tabindex="-1" class="anchor" id="property"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#property" title="Direct link to heading">#</a>property</h4><p>[Node Description] 작성 중인 노드명 입력</p><p><img src="/img/pipeline/workflow/workspace/job-processing/hivetohdfs01_property.png" alt="hivetohdfs01"></p><ol><li>prepare : 노드 실행 결과를 HDFS에 저장하기 위해 파일삭제/폴더생성 작업 선 수행(워크플로우 반복실행 시 활용가능)<ul><li>delete : 노드 실행 전 삭제할 폴더/파일 경로</li><li>mkdir	: 노드 실행 전 생성할 폴더 경로	</li></ul></li><li>cluster : Hive 수행할 클러스터(직접 입력 선택시 3,4,5 정보 직접 입력)</li><li>url : Hive 접속 주소(JDBC URL) ex) jdbc:hive2://hdp-master01:10000</li><li>user	: Hive 사용자 이름	</li><li>password	: Hive 사용자 암호</li><li>path : 결과물을 저장할 HDFS 경로</li><li>filename	: 저장할 파일 이름</li><li>header : 컬럼 명 헤더 포함하는 경우 체크박스 선택</li><li>overwrite : HDFS에 해당 파일이 존재할경우 overwrite/append 여부<ul><li>체크박스 선택 : overwrite 수행(해당 파일 덮어쓰기)</li><li>체크박스 해제 : append 수행(해당 파일에 내용 append)</li></ul></li><li>delimiter : HDFS에 저장할 결과물 파일의 구분자</li><li>sql : 데이터를 가져오기 위한 SQL 입력(SELECT 쿼리 사용)</li><li>version : Hive 버전(1.2.1, 3.1.1 중 택1)</li><li>retry<ul><li>max : 실행 실패 시 재시도 횟수</li><li>period : 재시도 주기(분 단위)</li></ul></li><li>forceOK : 데이터 처리가 실패해도 정상으로 표시하고 종료</li></ol><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="example"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#example" title="Direct link to heading">#</a>Example</h3><p>kbtest 클러스터 hive에 저장된 iris 테이블을 조회하여 test1234 클러스터에 result.csv 파일로 저장합니다.</p><ol><li>[브라우저] &gt; [HIVE] 에서 kbtest 클러스터 Hive 계정의 iris 테이블 내역 확인<br><img src="/img/pipeline/workflow/workspace/job-processing/hivetohdfs02_hive.png" alt="hivetohdfs02"></li><li>setting, property 패널에서 아래와 같이 입력<br>① setting 패널에서 [hiveToHdfs] 노드를 실행할 클러스터를 선택<br>② property 패널에서 hive가 위치한 클러스터를 선택<br>③ path 입력항목의 파일 브라우저를 열어서 result.csv파일을 저장할 경로 선택<br>④ query 입력<br><img src="/img/pipeline/workflow/workspace/job-processing/hivetohdfs03_property.png" alt="hivetohdfs03"><br><img src="/img/pipeline/workflow/workspace/job-processing/hivetohdfs04_hdfs_path.png" alt="hivetohdfs04"></li><li>워크플로우 실행결과 확인<br><img src="/img/pipeline/workflow/workspace/job-processing/hivetohdfs05_result.png" alt="hivetohdfs05"></li></ol></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/pipeline/workflow/workspace/export-data/alluxio"><h5 class="pagination-nav__link--sublabel">Previous</h5><h4 class="pagination-nav__link--label">« Alluxio 내보내기</h4></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/pipeline/workflow/workspace/job-processing/hdfs-to-icos"><h5 class="pagination-nav__link--sublabel">Next</h5><h4 class="pagination-nav__link--label">hdfsToIcos »</h4></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#definition" class="contents__link">Definition</a></li><li><a href="#set" class="contents__link">Set</a></li><li><a href="#example" class="contents__link">Example</a></li></ul></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center">Copyright © 2020 BY SK HOLDINGS CO. LTD. ALL RIGHTS RESERVED</div></div></footer>
 </div>
 
-<script src="/styles.5ce17067.js"></script>
+<script src="/styles.2140f325.js"></script>
 
-<script src="/runtime~main.7bc2abe8.js"></script>
+<script src="/runtime~main.e0940aed.js"></script>
 
-<script src="/main.71cac55c.js"></script>
+<script src="/main.f5aedd35.js"></script>
 
-<script src="/1.9af4e26f.js"></script>
+<script src="/1.999c023f.js"></script>
 
-<script src="/273.a2976c1d.js"></script>
+<script src="/273.c7e00eec.js"></script>
 
-<script src="/20ac7829.c2ce40f0.js"></script>
+<script src="/20ac7829.dad5b274.js"></script>
 
-<script src="/17896441.6925646b.js"></script>
+<script src="/17896441.819d5482.js"></script>
 
-<script src="/557db3df.a5d75771.js"></script>
+<script src="/557db3df.ee4b81d2.js"></script>
 
 
 </body>
