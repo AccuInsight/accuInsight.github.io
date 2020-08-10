@@ -6,13 +6,13 @@
 <meta name="generator" content="Docusaurus v2.0.0-alpha.61">
 <title data-react-helmet="true">계정 관리 | AccuInsight+ Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="계정 관리 | AccuInsight+ Documentation"><meta data-react-helmet="true" name="description" content="계정 관리"><meta data-react-helmet="true" property="og:description" content="계정 관리"><meta data-react-helmet="true" property="og:url" content="https://accuinsight.github.io//docs/dcm/mcm/account/account"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://accuinsight.github.io//docs/dcm/mcm/account/account"><link rel="stylesheet" href="/styles.44879012.css">
 <link rel="preload" href="/styles.03adc67d.js" as="script">
-<link rel="preload" href="/runtime~main.65b80e95.js" as="script">
+<link rel="preload" href="/runtime~main.c9d7e356.js" as="script">
 <link rel="preload" href="/main.50bed9cb.js" as="script">
 <link rel="preload" href="/1.b6a207cd.js" as="script">
 <link rel="preload" href="/2.6203932b.js" as="script">
 <link rel="preload" href="/276.021a16f6.js" as="script">
 <link rel="preload" href="/277.738e324b.js" as="script">
-<link rel="preload" href="/20ac7829.de9be6ab.js" as="script">
+<link rel="preload" href="/20ac7829.e23d9d78.js" as="script">
 <link rel="preload" href="/17896441.b71788ae.js" as="script">
 <link rel="preload" href="/fbbdac46.555b2af9.js" as="script">
 </head>
@@ -22,13 +22,13 @@
 AWS 의 IAM 권한을 통해 Role 방식으로 권한이 주어져 있어 계정등록은 따로 하지 않아도 됩니다.</p></blockquote><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="계정-등록"></a>계정 등록<a aria-hidden="true" tabindex="-1" class="hash-link" href="#계정-등록" title="Direct link to heading">#</a></h3><p><img src="/img/mcm/account/account002.png" alt="account002"></p><ol start="7"><li><p>검색 필터</p><ul><li>클라우드, 등록일로 리스트를 검색할 수 있음</li></ul></li><li><p>계정 등록</p><ul><li>계정 등록 팝업을 통해 계정을 등록</li><li>GCP 계정 등록 시 JSON으로 작성된 KeyFile을 등록 해야 하고 요금 정보가 Export되는 Dataset의 Table을 선택해야 함, Billing Dataset을 입력하지 않으면 빌링 정보가 수집되지 않음<ul><li>사전에 GCP Master 계정에서 BigQuery로 Export 설정을 해야 Table 정보가 생성 (참고 : <a href="https://cloud.google.com/billing/docs/how-to/export-data-bigquery" target="_blank" rel="noopener noreferrer">https://cloud.google.com/billing/docs/how-to/export-data-bigquery</a>)</li><li>&quot;테스트&quot; 버튼을 통해 테스트가 완료 되어야 등록이 가능, 권한이 없을 경우 PERMISSION_DENIED 과 같은 오류 팝업이 발생 할 수 있음</li><li>&quot;테스트&quot; 버튼은 입력 내용에 대한 단순 검증으로 오류 팝업이 발생 하지 않아도 충분한 권한이 없으면 클러스터를 생성할 수 없음</li></ul></li><li>[AWS 필요 권한]<ul><li>EMR 생성/수정/삭제, VPC 조회, Keypair 조회, S3 업로드/다운로드, 요금 조회</li></ul></li><li>[GCP 필요 권한]<ul><li>Dataproc 생성/수정/삭제, Network 조회, Storage 업로드/다운로드, Dataset 조회, BigQuery 조회</li></ul></li></ul></li></ol><blockquote><p>Note</p><p>계정 수정, 삭제 버튼
 Role 방식의 계정관리는 계정의 수정, 삭제를 할 수 없습니다.</p></blockquote><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="계정-삭제리플레쉬권한"></a>계정 삭제/리플레쉬/권한<a aria-hidden="true" tabindex="-1" class="hash-link" href="#계정-삭제리플레쉬권한" title="Direct link to heading">#</a></h3><p><img src="/img/mcm/account/account003.png" alt="account003"></p><ol start="9"><li>삭제<ul><li>체크 박스가 체크된 계정을 삭제</li></ul></li><li>리플레쉬<ul><li>계정 리스트를 갱신</li></ul></li><li>권한<ul><li>권한을 부여</li><li>계정의 관리자만 조회/생성 권한을 부여 할 수 있음 권한이 부여 된 사용자는 해당 계정으로 클러스터를 조회/생성 할 수 있음</li><li>[권한]<ul><li>없음 : 아무 권한 없음</li><li>조회 : 조회만 가능</li><li>조회/생성 : 조회와 생성/삭제가 가능</li></ul></li></ul></li><li>Action<ul><li>수정 : 계정을 수정</li><li>삭제 : 계정을 삭제</li></ul></li></ol></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/dcm/mcm/resource/clusterz"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« 클러스터</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/dcm/mcm/billing/billing"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">빌링 »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3klQ"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#계정-관리" class="table-of-contents__link">계정 관리</a><ul><li><a href="#계정-등록" class="table-of-contents__link">계정 등록</a></li><li><a href="#계정-삭제리플레쉬권한" class="table-of-contents__link">계정 삭제/리플레쉬/권한</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center"><div>Copyright © 2020 BY SK HOLDINGS CO. LTD. ALL RIGHTS RESERVED</div></div></div></footer></div>
 <script src="/styles.03adc67d.js"></script>
-<script src="/runtime~main.65b80e95.js"></script>
+<script src="/runtime~main.c9d7e356.js"></script>
 <script src="/main.50bed9cb.js"></script>
 <script src="/1.b6a207cd.js"></script>
 <script src="/2.6203932b.js"></script>
 <script src="/276.021a16f6.js"></script>
 <script src="/277.738e324b.js"></script>
-<script src="/20ac7829.de9be6ab.js"></script>
+<script src="/20ac7829.e23d9d78.js"></script>
 <script src="/17896441.b71788ae.js"></script>
 <script src="/fbbdac46.555b2af9.js"></script>
 </body>
