@@ -6,15 +6,15 @@
 <meta name="generator" content="Docusaurus v2.0.0-alpha.61">
 <title data-react-helmet="true">select | AccuInsight+ Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="select | AccuInsight+ Documentation"><meta data-react-helmet="true" name="description" content="Definition"><meta data-react-helmet="true" property="og:description" content="Definition"><meta data-react-helmet="true" property="og:url" content="https://accuinsight.github.io//docs/batchpipeline/workflow/workspace/data-processing-basic/select"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://accuinsight.github.io//docs/batchpipeline/workflow/workspace/data-processing-basic/select"><link rel="stylesheet" href="/styles.44879012.css">
 <link rel="preload" href="/styles.03adc67d.js" as="script">
-<link rel="preload" href="/runtime~main.c9d7e356.js" as="script">
-<link rel="preload" href="/main.50bed9cb.js" as="script">
-<link rel="preload" href="/1.b6a207cd.js" as="script">
-<link rel="preload" href="/2.6203932b.js" as="script">
-<link rel="preload" href="/276.021a16f6.js" as="script">
-<link rel="preload" href="/277.738e324b.js" as="script">
-<link rel="preload" href="/20ac7829.e23d9d78.js" as="script">
-<link rel="preload" href="/17896441.b71788ae.js" as="script">
-<link rel="preload" href="/1778afd6.565c1a92.js" as="script">
+<link rel="preload" href="/runtime~main.4718564c.js" as="script">
+<link rel="preload" href="/main.3164400c.js" as="script">
+<link rel="preload" href="/1.7a06f662.js" as="script">
+<link rel="preload" href="/2.4db8d49a.js" as="script">
+<link rel="preload" href="/277.b2c0ecf2.js" as="script">
+<link rel="preload" href="/278.990da4f2.js" as="script">
+<link rel="preload" href="/20ac7829.a4da2f9f.js" as="script">
+<link rel="preload" href="/17896441.6fe1a8b1.js" as="script">
+<link rel="preload" href="/1778afd6.368f273b.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -22,14 +22,14 @@
 <img src="/img/batchpipeline/workflow/workspace/data-processing-basic/prebasic057_select_%EC%8A%A4%EB%83%85%EC%83%B7%EC%A0%95%EB%B3%B4.png" alt="prebasic057"> </p></li><li><p>노드 스키마 정보<br>
 <img src="/img/batchpipeline/workflow/workspace/data-processing-basic/prebasic058_select_%EB%85%B8%EB%93%9C%EC%8A%A4%ED%82%A4%EB%A7%88%EC%A0%95%EB%B3%B4.png" alt="prebasic058"> </p></li></ul></li></ol><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="troubleshooting"></a>Troubleshooting<a aria-hidden="true" tabindex="-1" class="hash-link" href="#troubleshooting" title="Direct link to heading">#</a></h3><ol><li>클러스터 [OOO]의 세션상태를 확인할 수 없습니다.(설정 &gt; 세션관리)</li></ol><p><img src="/img/batchpipeline/workflow/workspace/data-processing-basic/prebasic059_select_%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EC%84%B8%EC%85%98%EC%83%81%ED%83%9C%ED%99%95%EC%9D%B8%EB%B6%88%EA%B0%80.png" alt="prebasic059"></p><p>Apache Livy 세션이 종료됐거나, 클러스터 내 가용 Memory를 다수 점유하고 있어 워크플로우 실행이 어려울 경우 위와 같은 메시지가 나타날 수 있다. 아래와 같이 조치한다.  </p><p>1&gt; [설정] &gt; [세션관리]에서 세션 상태정보를 확인한다. [NONE], [DEAD] 상태일 경우 기능 필드에서 [세션생성] 버튼을 눌러 Livy Seseeion을 생성한다.   </p><p>2&gt; 상태정보가 [IDLE]일 경우 Livy Session은 떠 있으나, 현재 작업중 또는 작업완료 후 메모리를 반환하지 않은 상태이다. 아래와 같이 작업상태를 먼저 확인한다.   </p><ul><li>[DHP] &gt; [CLUSTER] &gt; 작업 클러스터명 &gt; [APPL HISTORY] 으로 이동 후 ID별 작업상태(State, Final State)정보를 확인한다.   </li><li>&quot;bpSession&quot;을 제외한 다른 작업들이 종료상태라면 [세션관리]에서 [세션삭제] 후 [세션생성] 작업을 수행한다.  </li></ul></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/batchpipeline/workflow/workspace/data-processing-basic/sample"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« sample</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/batchpipeline/workflow/workspace/data-processing-basic/sort"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">sort »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3klQ"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#definition" class="table-of-contents__link">Definition</a></li><li><a href="#set" class="table-of-contents__link">Set</a></li><li><a href="#example" class="table-of-contents__link">Example</a></li><li><a href="#troubleshooting" class="table-of-contents__link">Troubleshooting</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="text--center"><div>Copyright © 2020 BY SK HOLDINGS CO. LTD. ALL RIGHTS RESERVED</div></div></div></footer></div>
 <script src="/styles.03adc67d.js"></script>
-<script src="/runtime~main.c9d7e356.js"></script>
-<script src="/main.50bed9cb.js"></script>
-<script src="/1.b6a207cd.js"></script>
-<script src="/2.6203932b.js"></script>
-<script src="/276.021a16f6.js"></script>
-<script src="/277.738e324b.js"></script>
-<script src="/20ac7829.e23d9d78.js"></script>
-<script src="/17896441.b71788ae.js"></script>
-<script src="/1778afd6.565c1a92.js"></script>
+<script src="/runtime~main.4718564c.js"></script>
+<script src="/main.3164400c.js"></script>
+<script src="/1.7a06f662.js"></script>
+<script src="/2.4db8d49a.js"></script>
+<script src="/277.b2c0ecf2.js"></script>
+<script src="/278.990da4f2.js"></script>
+<script src="/20ac7829.a4da2f9f.js"></script>
+<script src="/17896441.6fe1a8b1.js"></script>
+<script src="/1778afd6.368f273b.js"></script>
 </body>
 </html>
