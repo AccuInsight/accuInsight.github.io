@@ -6,13 +6,13 @@
 <meta name="generator" content="Docusaurus v2.0.0-alpha.61">
 <title data-react-helmet="true">spark | AccuInsight+ Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="spark | AccuInsight+ Documentation"><meta data-react-helmet="true" name="description" content="Definition"><meta data-react-helmet="true" property="og:description" content="Definition"><meta data-react-helmet="true" property="og:url" content="https://accuinsight.github.io//docs/batchpipeline/workflow/workspace/job-processing/spark"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://accuinsight.github.io//docs/batchpipeline/workflow/workspace/job-processing/spark"><link rel="stylesheet" href="/styles.4c40298a.css">
 <link rel="preload" href="/styles.ad829104.js" as="script">
-<link rel="preload" href="/runtime~main.c6786c96.js" as="script">
+<link rel="preload" href="/runtime~main.5fc80e63.js" as="script">
 <link rel="preload" href="/main.d5af827f.js" as="script">
 <link rel="preload" href="/1.5c9f4134.js" as="script">
 <link rel="preload" href="/2.78b07ba3.js" as="script">
 <link rel="preload" href="/284.efdc8584.js" as="script">
 <link rel="preload" href="/285.32fce03c.js" as="script">
-<link rel="preload" href="/20ac7829.198f328f.js" as="script">
+<link rel="preload" href="/20ac7829.09ce341b.js" as="script">
 <link rel="preload" href="/17896441.2718a918.js" as="script">
 <link rel="preload" href="/a57a5c64.ea95444f.js" as="script">
 </head>
@@ -27,13 +27,13 @@
 </span></div></div></div></div></div><ol><li><p>워크플로우 실행 클러스터에 basicavg.py 파일을 적재한다. </p></li><li><p>[Flow구성] &gt; [spark] 노드를 drag &amp; drop 한 후 setting 패널에서 실행클러스터를 선택한다. </p></li><li><p>property 패널에서 아래와 같이 입력한다. </p><ul><li><p>2.file 항목에 hdfs브라우저에서 basicavg.py이 저장된 경로를 선택한다.<br>
 <img src="/img/batchpipeline/workflow/workspace/job-processing/flow075_spark_file_property.png" alt="flow075">  </p></li><li><p>그 외 항목을 아래와 같이 입력한다.  </p><table><thead><tr><th>property</th><th>value</th></tr></thead><tbody><tr><td>6.master</td><td>yarn</td></tr><tr><td>7.mode</td><td>client</td></tr><tr><td>9.jar</td><td>basicavg.py</td></tr></tbody></table></li><li><p>10.sparkOpts : 위 매뉴얼 중 property 항목을 참고하여 입력한다. 본 예제에서는 driver-memory, conf 옵션을 사용했다.  </p><table><thead><tr><th>key</th><th>value</th></tr></thead><tbody><tr><td>--driver-memory</td><td>2G</td></tr><tr><td>--conf</td><td>spark.executor.extraJavaOptions=-Xms512m -Xmx1024m</td></tr></tbody></table><p><img src="/img/batchpipeline/workflow/workspace/job-processing/flow076_spark_other_property.png" alt="flow076">  </p></li></ul></li></ol></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/batchpipeline/workflow/workspace/job-processing/shell"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« shell</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/batchpipeline/workflow/workspace/job-processing/sqoop"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">sqoop »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3klQ"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#definition" class="table-of-contents__link">Definition</a></li><li><a href="#set" class="table-of-contents__link">Set</a></li><li><a href="#example" class="table-of-contents__link">Example</a></li></ul></div></div></div></div></main></div></div></div>
 <script src="/styles.ad829104.js"></script>
-<script src="/runtime~main.c6786c96.js"></script>
+<script src="/runtime~main.5fc80e63.js"></script>
 <script src="/main.d5af827f.js"></script>
 <script src="/1.5c9f4134.js"></script>
 <script src="/2.78b07ba3.js"></script>
 <script src="/284.efdc8584.js"></script>
 <script src="/285.32fce03c.js"></script>
-<script src="/20ac7829.198f328f.js"></script>
+<script src="/20ac7829.09ce341b.js"></script>
 <script src="/17896441.2718a918.js"></script>
 <script src="/a57a5c64.ea95444f.js"></script>
 </body>
